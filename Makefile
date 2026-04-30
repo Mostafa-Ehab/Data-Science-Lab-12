@@ -7,10 +7,17 @@
 
 CONFIG := configs/config.toml
 
-.PHONY: help setup test lint clean
+.PHONY: help pipeline setup validate clean_data features train classify test lint clean
 
 pipeline:  # run the entire pipeline
-	setup lint test validate clean_data features train classify
+	$(MAKE) setup
+	$(MAKE) lint
+	$(MAKE) test
+	$(MAKE) validate
+	$(MAKE) clean_data
+	$(MAKE) features
+	$(MAKE) train
+	$(MAKE) classify
 
 setup:
 	@echo "TODO: Install dependencies."
