@@ -1,0 +1,49 @@
+[data]
+target_column = "depression_label"
+numeric_columns = [
+	"age",
+	"daily_social_media_hours",
+	"sleep_hours",
+	"screen_time_before_sleep",
+	"academic_performance",
+	"physical_activity",
+	"social_interaction_level",
+	"stress_level",
+	"anxiety_level",
+	"addiction_level",
+]
+categorical_columns = ["gender", "platform_usage"]
+
+raw_data_path = "data/raw/Teen_Mental_Health_Dataset.csv"
+clean_data_path = "data/clean/cleaned_data.csv"
+cleaned_data_path = "data/clean/cleaned_data.csv"
+featured_data_path = "data/processed/featured_data.csv"
+
+train_feature_columns = [
+	"age",
+	"daily_social_media_hours",
+	"sleep_hours",
+	"screen_time_before_sleep",
+	"academic_performance",
+	"physical_activity",
+	"social_interaction_level",
+	"stress_level",
+	"anxiety_level",
+	"addiction_level",
+]
+test_size = 0.2
+random_state = 42
+
+[model]
+n_estimators = 200
+max_depth = 12
+model_output_path = "models/best_classifier.pkl"
+
+[reports]
+cleaning_log_path = "reports/cleaning_log.json"
+validation_raw_path = "reports/validation_raw.json"
+validation_cleaned_path = "reports/validation_cleaned.json"
+feature_log_path = "reports/feature_log.json"
+metrics_path = "reports/train_metrics.json"
+classification_metrics_path = "reports/classification_metrics.json"
+pipeline_report_path = "reports/pipeline_report.md"
