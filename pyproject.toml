@@ -2,9 +2,22 @@
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
-[project]
+[tool.poetry]
 name = "student_lab_template"
 version = "0.1.0"
 description = "TODO: Add project description"
+authors = ["Mostafa Ehab <mostafa.e.h.m.r@gmail.com>", "Omar Ashraf <omar.ashrafofficial1@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
 
 # TODO: Add dependencies and optional tool configs (pytest, black, flake8, etc.)
+pydantic = "^2.13.3"
+scikit-learn = "^1.8.0"
+ipykernel = "^7.2.0"
+dotenv = "^0.9.9"
+pandas = "^3.0.2"
+toml = "^0.10.2"
+flake8 = "^7.3.0"
+black = "^26.3.1"
+ruff = "^0.15.12"
